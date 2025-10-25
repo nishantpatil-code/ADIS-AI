@@ -1,0 +1,86 @@
+.leadership {
+  background: #b3d9e6;
+  padding: 40px 20px;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.leadership h2 {
+  font-size: 1.75rem;
+  margin-bottom: 30px;
+  color: #002c77;
+}
+
+.leader-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.leader-card {
+  max-width: 300px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.leader-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.role {
+  font-weight: bold;
+  color: #002c77;
+}
+
+.linkedin {
+  width: 28px;
+  margin: 10px 0;
+}
+
+.desc {
+  font-size: 14px;
+  color: #444;
+  margin-top: 10px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .leadership {
+    padding: 60px 40px;
+  }
+
+  .leadership h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .leader-grid {
+    gap: 30px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .leadership {
+    padding: 80px 60px;
+  }
+
+  .leadership h2 {
+    font-size: 2.25rem;
+    margin-bottom: 50px;
+  }
+
+  .leader-grid {
+    gap: 40px;
+  }
+}

@@ -1,0 +1,158 @@
+.careers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #b3d9e6 ;
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.careers-container {
+  display: flex;
+  flex-direction: column;
+  background: #f9f8f8;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  width: 95%;             /* slightly narrower on mobile */
+  max-width: 1800px;      /* allows it to grow on large screens */
+  margin: 0 auto;         /* keeps it perfectly centered */
+  overflow: hidden;
+}
+
+
+.careers-content {
+  padding: 25px 20px;
+  text-align: center; /* center text on mobile */
+}
+
+.careers-content h2 {
+  font-size: 22px;
+  color: #003366;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.careers-content h3 {
+  font-size: 16px;
+  color: #003366;
+  margin-top: 15px;
+}
+
+.careers-content p {
+  font-size: 14px;
+  color: #1a365d;
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.career-btn {
+  margin-top: 5px;
+  padding: 12px 24px;
+  background: #004aad;
+  color: #fff;
+  border: none;
+  border-radius: 99px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.career-btn:hover {
+  background: #003580;
+}
+
+.careers-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* full width on mobile */
+}
+
+.careers-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 250px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .careers {
+    padding: 60px 40px;
+  }
+
+  .careers-container {
+    flex-direction: row;
+    width: 99%;
+    max-height: 350px;
+  }
+
+  .careers-content {
+    flex: 1;
+    padding: 30px;
+    text-align: left;
+  }
+
+  .careers-content h2 {
+    font-size: 22px;
+  }
+
+  .careers-content h3 {
+    font-size: 16px;
+  }
+
+  .careers-content p {
+    font-size: 13px;
+  }
+
+  .career-btn {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+
+  .careers-image {
+    flex: 1;
+  }
+
+  .careers-image img {
+    width: 70%;
+    height: 100%;
+    max-height: none;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .careers {
+    padding: 80px 60px;
+  }
+
+  .careers-content {
+    padding: 30px 40px;
+  }
+
+  .careers-content h2 {
+    font-size: 24px;
+  }
+
+  .careers-content h3 {
+    font-size: 17px;
+  }
+
+  .careers-content p {
+    font-size: 14px;
+  }
+
+  .career-btn {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+
+  .careers-image {
+    flex: 1;
+  }
+}

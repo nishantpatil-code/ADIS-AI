@@ -1,0 +1,282 @@
+.awards-recognition {
+  width: 100%;
+  min-height: 100vh;
+  background: #b3d9e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0 60px;
+}
+
+/* Awards Content Section */
+.awards-content {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.awards-container {
+  max-width: 1100px;
+  width: 90%;
+  margin: 0 auto;  /* centers it horizontally with no extra gap */
+  background: white;
+  padding: 60px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Main Title */
+.awards-main-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2563a8;
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+
+/* Intro Paragraph */
+.awards-intro {
+  font-size: 1em;
+  line-height: 1.8;
+  color: #2563a8;
+  margin-bottom: 0;
+  padding: 0 170px;
+  text-align: justify;
+  max-width: 100%;
+}
+
+/* Awards List */
+.awards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 80px auto 0;
+  max-width: 100%;
+  width: 100%;
+  padding: 60px 0;
+  background: white;
+  align-items: center;
+}
+
+/* Award Item */
+.award-item {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 40px;
+  align-items: stretch;
+  padding-bottom: 60px;
+  border-bottom: 2px solid #2563a8;
+  max-width: 1100px;
+  width: 90%;
+}
+
+.award-item:last-child {
+  border-bottom: 2px solid #2563a8;
+}
+
+/* Reverse layout for alternating items */
+.award-item-reverse {
+  grid-template-columns: 1fr 350px;
+}
+
+.award-item-reverse .award-logo-card {
+  order: 2;
+}
+
+.award-item-reverse .award-content-card {
+  order: 1;
+}
+
+/* Award Logo Card */
+.award-logo-card {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.award-logo {
+  max-width: 100%;
+  max-height: 250px;
+  object-fit: contain;
+}
+
+.award-logo-placeholder {
+  font-size: 1.5rem;
+  color: #2563a8;
+  font-weight: 600;
+}
+
+/* Award Content Card */
+.award-content-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+}
+
+/* Award Number */
+.award-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2563a8;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.award-title {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #2563a8;
+  margin: 0;
+}
+
+.award-subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2563a8;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.award-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #2563a8;
+  margin: 0;
+  text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .awards-recognition {
+    padding: 80px 0 40px;
+  }
+
+  .awards-container {
+    padding: 40px 30px;
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .awards-main-title {
+    font-size: 2rem;
+    margin: 0 0 20px 0;
+  }
+
+  .awards-intro {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  .awards-intro {
+    padding: 0 30px;
+  }
+
+  .awards-list {
+    gap: 40px;
+    margin: 60px auto 0;
+    width: 85%;
+    padding: 0 15px 40px;
+  }
+
+  .award-item,
+  .award-item-reverse {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-bottom: 40px;
+  }
+
+  .award-item-reverse .award-logo-card,
+  .award-item-reverse .award-content-card {
+    order: initial;
+  }
+
+  .award-logo-card {
+    padding: 30px;
+    min-height: 150px;
+  }
+
+  .award-number {
+    font-size: 2.5rem;
+  }
+
+  .award-title {
+    font-size: 0.9rem;
+  }
+
+  .award-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  .award-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .awards-recognition {
+    padding: 70px 0 30px;
+  }
+
+  .awards-container {
+    padding: 30px 20px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .awards-main-title {
+    font-size: 1.5rem;
+    margin: 0 0 20px 0;
+  }
+
+  .awards-intro {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    padding: 0 20px;
+  }
+
+  .awards-list {
+    gap: 30px;
+    margin: 50px auto 0;
+    width: 90%;
+    padding: 0 10px 30px;
+  }
+
+  .award-item,
+  .award-item-reverse {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding-bottom: 30px;
+  }
+
+  .award-logo-card {
+    padding: 20px;
+    min-height: 120px;
+  }
+
+  .award-number {
+    font-size: 2rem;
+  }
+
+  .award-title {
+    font-size: 0.85rem;
+  }
+
+  .award-subtitle {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  .award-description {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
