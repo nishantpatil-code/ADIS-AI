@@ -221,16 +221,22 @@
   height: 480px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 25px;
-  padding: 15px;
+  padding: 0;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
   position: relative;
   overflow: hidden;
 }
 
 .phone-header-content {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
   text-align: center;
   padding: 15px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
 }
 
 .phone-logo {
@@ -241,9 +247,11 @@
 }
 
 .dog-content-area {
-  position: relative;
-  margin-top: 15px;
-  height: 350px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -253,7 +261,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 25px;
 }
 
 .scanning-overlay {
@@ -284,12 +292,17 @@
   position: absolute;
   bottom: 20px;
   right: 20px;
+  z-index: 10;
 }
 
 .battery-percentage {
   color: white;
   font-size: 0.875rem;
   font-weight: 600;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
 }
 
 /* Features Grid */
@@ -515,11 +528,15 @@
   .phone-screen {
     width: 260px;
     height: 520px;
-    padding: 18px;
+    padding: 0;
   }
 
   .dog-content-area {
-    height: 380px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .features-grid-container {
@@ -589,12 +606,15 @@
     width: 280px;
     height: 560px;
     border-radius: 30px;
-    padding: 20px;
+    padding: 0;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   }
 
   .dog-content-area {
-    margin-top: 20px;
-    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }

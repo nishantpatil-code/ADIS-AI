@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Services.css";
 import Services1 from "./Services1";
 import serviceVideo from "../../../assets/filee.mp4";
+import puppyVideo from "../../../assets/puppy.mp4";
 
 // Carousel images
 import img1 from "../../../assets/11062b_eae2ed91f649411abc8de91c0fa5d15f~mv2.avif";
@@ -87,16 +88,18 @@ function Services() {
                 <span className="phone-logo">ADIS</span>
               </header>
               <div className="dog-content-area">
-                <img
-                  src="https://i.ibb.co/6P8v1j7/dog-image.jpg"
-                  alt="Dog being scanned"
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                   className="scanned-dog-image"
-                />
+                  src={puppyVideo}
+                >
+                  Your browser does not support the video tag.
+                </video>
                 <div className="scanning-overlay"></div>
               </div>
-              <footer className="phone-footer-content">
-                <div className="battery-percentage">100%</div>
-              </footer>
             </div>
           </div>
 
