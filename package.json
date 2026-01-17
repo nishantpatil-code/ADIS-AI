@@ -2,7 +2,6 @@
   "name": "adis-clone",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://nishantpatil-code.github.io/ADIS-AI-",
   "type": "module",
 
   "scripts": {
