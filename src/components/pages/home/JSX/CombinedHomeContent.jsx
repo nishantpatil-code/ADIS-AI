@@ -27,7 +27,7 @@ import investIndia from '../../../../assets/invest india.avif';
 import ccmap from '../../../../assets/c-camp.avif';
 import fullWidthImage from '../../../../assets/Screenshot 2025-10-16 102932.png';
 import videoFile from '../../../../assets/file.mp4';
-import petVideo from '../../../../assets/Complete Pet Identification for Responsible Pet Owners.mp4';
+import petVideo from '../../../../assets/Adis Introduction ANIMAL DIGITAL INFORMATION SYSTEMS_1080p.mp4';
 import adisLogo from '../../../../assets/ADIS LOGO_edited_edited_edited_edited_pn.avif';
 import newsImage from '../../../../assets/cat sleeping.avif';
 import { FaLinkedin } from "react-icons/fa";

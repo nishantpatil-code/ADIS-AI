@@ -1,6 +1,6 @@
 import React from "react";
 import "./Services1.css";
-import petImage from "../../../assets/83b8dd_9ebedfb3093e421e9b906e5a84784248~mv2.jpg";
+import petImage from "../../../assets/83b8dd_9ebedfb3093e421e9b906e5a84784248_mv2-removebg-preview.png";
 
 const features = [
   {

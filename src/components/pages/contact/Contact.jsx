@@ -11,6 +11,7 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,7 +21,7 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     // Validate required fields
@@ -29,21 +30,48 @@ const Contact = () => {
       return;
     }
 
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-    
-    // Reset form after 5 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        address: '',
-        message: ''
+    setIsSubmitting(true);
+
+    try {
+      // Using Formspree as a free email service
+      // You'll need to create a free account at formspree.io and replace the form ID
+      const response = await fetch('https://formspree.io/f/your-form-id', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          address: formData.address,
+          message: formData.message,
+          subject: 'New Contact Form Submission from ADIS Website'
+        }),
       });
-    }, 5000);
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        
+        // Reset form after 5 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormData({
+            firstName: '',
+            lastName: '',
+            email: '',
+            address: '',
+            message: ''
+          });
+        }, 5000);
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Failed to send message. Please try again or contact us directly at info@adis.co.in');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -122,7 +150,9 @@ const Contact = () => {
             />
           </div>
 
-              <button type="submit" className="submit-button">Send</button>
+              <button type="submit" className="submit-button" disabled={isSubmitting}>
+  {isSubmitting ? 'Sending...' : 'Send'}
+</button>
               {isSubmitted && (
                 <p className="success-message">Thanks for submitting! We'll get back to you soon.</p>
               )}

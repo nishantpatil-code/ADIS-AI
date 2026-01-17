@@ -2,7 +2,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Careers.css";
-import dog from '../../../../assets/b181e18a430c43afa6342d136860f0e8.avif';
+import dog from '../../../../assets/doggg.png';
 
 function Careers() {
   const navigate = useNavigate();
