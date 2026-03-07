@@ -445,10 +445,9 @@
 
 
 
-/* Team Section */
 .combined-team {
   background-color: #b3d9e6;
-  padding: 0 20px 20px;
+  padding: 60px 20px; /* Increased top padding for better spacing */
   text-align: center;
   width: 100%;
   max-width: 100vw;
@@ -458,7 +457,7 @@
 }
 
 .combined-team-content {
-  max-width: 1200px;
+  max-width: 1400px; /* Widened to fit 5 members in a row on large screens */
   margin: 0 auto;
   width: 100%;
 }
@@ -466,25 +465,32 @@
 .combined-team-title {
   font-size: 3rem;
   font-weight: 400;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
   color: #004d66;
   font-family: 'Quicksand', 'Avenir', 'Helvetica Neue', Arial, sans-serif;
 }
 
+/* Flexbox Layout Adjustments */
 .combined-team-container {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  gap: 25px;
+  flex-wrap: wrap; /* Important: allows items to drop to next line on smaller screens */
 }
 
 .combined-team-member {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 250px;
+  width: 240px; /* Set a consistent width */
   text-align: center;
   color: #004d66;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.combined-team-member:hover {
+  transform: translateY(-5px); /* Subtle lift on hover */
 }
 
 .combined-member-photo {
@@ -494,11 +500,11 @@
   object-fit: cover;
   margin-bottom: 15px;
   border: 4px solid #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .combined-member-info {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .combined-name {
@@ -510,6 +516,7 @@
 
 .combined-role {
   font-size: 0.9rem;
+  font-weight: 500;
   color: #1a365d;
   margin-top: 5px;
   margin-bottom: 10px;
@@ -520,11 +527,12 @@
   color: #0077b5;
   font-size: 1.7rem;
   margin-bottom: 15px;
-  transition: transform 0.2s ease-in-out;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .combined-linkedin-link:hover {
-  transform: scale(1.1);
+  color: #005582;
+  transform: scale(1.15);
 }
 
 .combined-linkedin-icon {
@@ -534,10 +542,22 @@
 
 .combined-description {
   font-size: 0.85rem;
-  line-height: 1.4;
-  color:#1a365d;
+  line-height: 1.5;
+  color: #1a365d;
   padding: 0 10px;
-  text-align: justify;
+  text-align: center; /* Center-aligned for better visual flow in columns */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .combined-team-title {
+    font-size: 2.2rem;
+  }
+  
+  .combined-team-member {
+    width: 100%; /* Take full width on small phones if needed */
+    max-width: 300px;
+  }
 }
 
 /* Clients Section */
@@ -1122,5 +1142,167 @@
   .combined-partner-name {
     font-size: 0.75rem;
     color: #ffffff;
+  }
+}
+
+/* Mobile Responsiveness - up to 767px */
+@media (max-width: 767px) {
+  /* Hero Section */
+  .combined-hero {
+    padding: 20px 10px;
+    padding-top: 50px;
+    min-height: 30vh;
+  }
+
+  .combined-hero-text h3 {
+    font-size: 18px;
+  }
+
+  .combined-hero-text h1 {
+    font-size: 24px;
+  }
+
+  .combined-hero-img img {
+    max-width: 200px;
+  }
+
+  /* Info Section One */
+  .combined-info {
+    padding: 30px 10px;
+  }
+
+  .combined-info-images img {
+    width: 120px;
+  }
+
+  .combined-info-text h2 {
+    font-size: 16px;
+  }
+
+  .combined-info-text p {
+    font-size: 16px;
+  }
+
+  .combined-store-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .combined-store-buttons img {
+    height: 40px;
+  }
+
+  /* Info Section Two */
+  .combined-info-section {
+    padding: 20px 10px;
+  }
+
+  .combined-info-section-text p {
+    font-size: 16px;
+  }
+
+  .combined-info-video {
+    margin: 20px auto;
+  }
+
+  /* Team Section */
+  .combined-team {
+    padding: 40px 10px;
+  }
+
+  .combined-team-title {
+    font-size: 1.5rem;
+  }
+
+  .combined-team-container {
+    gap: 20px;
+  }
+
+  .combined-team-member {
+    max-width: 280px;
+  }
+
+  .combined-member-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .combined-name {
+    font-size: 1.1rem;
+  }
+
+  .combined-description {
+    font-size: 0.8rem;
+  }
+
+  /* Clients Section */
+  .combined-clients-section {
+    padding: 30px 10px;
+  }
+
+  .combined-clients-title {
+    font-size: 2rem;
+  }
+
+  .combined-clients-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .combined-client-logo img {
+    width: 70px;
+    height: 70px;
+  }
+
+  /* Partners Section */
+  .combined-partners-section {
+    padding: 30px 10px;
+  }
+
+  .combined-partners-title {
+    font-size: 1.5rem;
+  }
+
+  .combined-partners-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .combined-partner-logo img {
+    width: 70px;
+    height: 70px;
+  }
+
+  /* News Section */
+  .combined-news-section {
+    padding: 20px 10px 0;
+  }
+
+  .combined-news-title {
+    font-size: 1.2rem;
+  }
+
+  .combined-news-text {
+    font-size: 0.85rem;
+  }
+
+  .combined-news-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  /* Full Width Video */
+  .combined-full-width-video {
+    height: 250px;
+  }
+
+  .logo-container {
+    width: 100px;
+    left: 5px;
+    top: 5px;
+  }
+
+  .adis-logo {
+    padding: 3px;
   }
 }

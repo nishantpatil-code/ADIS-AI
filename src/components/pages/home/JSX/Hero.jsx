@@ -6,16 +6,18 @@ function Hero() {
   return (
     <section className="hero">
       <div className="hero-container">
-        <div className="hero-text">
-          <h3>Welcome to ADIS...</h3>
-          <h1>
-            Revolutionizing <br /> Animal Management
+        <div className="hero-text animate-fade-in">
+          <h3 className="hero-subtitle">Welcome to ADIS...</h3>
+          <h1 className="hero-title">
+            Revolutionizing <br /> <span>Animal Management</span>
           </h1>
-          {/* <button className="hero-btn">Get Started</button> */}
-          {/* <UIButton label="Get Started" onClick={()=>{alert('Clicked')}} style={{backgroundColor : 'red'}}/> */}
+          <div className="hero-action">
+             <UIButton label="Get Started" onClick={()=>{alert('Clicked')}} className="hero-btn-animated"/>
+          </div>
         </div>
 
-        <div className="hero-img">
+        <div className="hero-img animate-float">
+          <div className="image-blob-bg"></div> {/* Decorative element */}
           <img src={dogCatImage} alt="Dog and Cat" />
         </div>
       </div>

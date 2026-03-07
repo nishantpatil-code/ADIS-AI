@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Outlet } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
 import Navbar from "../components/pages/home/JSX/Navbar";
 import Footer from "../components/pages/home/JSX/Footer";
 import WhatsAppButton from "../components/common/WhatsAppButton";
@@ -28,7 +28,7 @@ function Layout() {
 
 export default function AppRoutes() {
   return (
-    <Router>
+    <>
       <ScrollToTop />
       <Routes>
         <Route element={<Layout />}>
@@ -43,7 +43,7 @@ export default function AppRoutes() {
           <Route path="/awards" element={<AwardsRecognition />} />
         </Route>
       </Routes>
-    </Router>
+    </>
   );
 }
 

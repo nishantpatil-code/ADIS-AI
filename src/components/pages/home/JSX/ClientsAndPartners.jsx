@@ -5,7 +5,7 @@ import "./ClientsAndPartners.css";
 import sbi from '../../../../assets/SBI GENERAL INSURANCE.avif';
 import reliance from '../../../../assets/RELIANCE GENERAL INSURANCE.avif';
 import dhanshakti from '../../../../assets/dHANSHAKTI.avif';
-import bajaj from '../../../../assets/bajaj-allianz-.avif';
+import bajaj from '../../../../assets/signal-2026-03-07-135059_002.png';
 import gok from '../../../../assets/Government of Karnataka_edited.avif';
 import nddb from '../../../../assets/NDDB DAIRY SERVICE.avif';
 import baif from '../../../../assets/bAIF.avif';
@@ -39,8 +39,8 @@ function ClientsAndPartners() {
             <p className="client-name">Dhanshakti</p>
           </div>
           <div className="client-logo">
-            <img src={bajaj} alt="Bajaj Allianz" />
-            <p className="client-name">Bajaj Allianz</p>
+            <img src={bajaj} alt="Bajaj General Insurance" />
+            <p className="client-name">Bajaj General Insurance</p>
           </div>
           <div className="client-logo">
             <img src={gok} alt="Government of Karnataka" />

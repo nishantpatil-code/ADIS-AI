@@ -11,20 +11,22 @@ import playStore from '../../../../assets/download play store.png';
 import member1 from '../../../../assets/member1.avif';
 import member2 from '../../../../assets/member2.jpg';
 import member3 from '../../../../assets/member3.avif';
+import member4 from '../../../../assets/clyde.webp';
+import member5 from '../../../../assets/ashok.webp';
 import sbi from '../../../../assets/SBI GENERAL INSURANCE.avif';
 import reliance from '../../../../assets/RELIANCE GENERAL INSURANCE.avif';
 import dhanshakti from '../../../../assets/dHANSHAKTI.avif';
-import bajaj from '../../../../assets/bajaj-allianz-.avif';
+import bajaj from '../../../../assets/signal-2026-03-07-135059_002.png';
 import gok from '../../../../assets/Government of Karnataka_edited.avif';
 import nddb from '../../../../assets/NDDB DAIRY SERVICE.avif';
 import baif from '../../../../assets/bAIF.avif';
-import agrivijay from '../../../../assets/aGRIVIJAY.avif';
 import startupIndia from '../../../../assets/STARTUP INDIA.avif';
 import startupKarnataka from '../../../../assets/STARTUP KARNATAKA.avif';
 import birac from '../../../../assets/BIRAC.avif';
 import nvidia from '../../../../assets/nvdia.avif';
 import investIndia from '../../../../assets/invest india.avif';
 import ccmap from '../../../../assets/c-camp.avif';
+import hdfc from '../../../../assets/HDFC_ERGO_Logo_2025.webp';
 import fullWidthImage from '../../../../assets/Screenshot 2025-10-16 102932.png';
 import videoFile from '../../../../assets/file.mp4';
 import petVideo from '../../../../assets/Adis Introduction ANIMAL DIGITAL INFORMATION SYSTEMS_1080p.mp4';
@@ -34,13 +36,8 @@ import { FaLinkedin } from "react-icons/fa";
 
 function CombinedHomeContent() {
   const videoRef = useRef(null);
-  const navigate = useNavigate();
 
-  const handlePlay = () => {
-    if (videoRef.current) {
-      videoRef.current.play();
-    }
-  };
+  const navigate = useNavigate();
 
   const handleExploreMore = () => {
     navigate('/services');
@@ -121,58 +118,87 @@ function CombinedHomeContent() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="combined-team">
-        <div className="combined-team-content">
-          <h2 className="combined-team-title">Meet Our Leadership Team</h2>
-          <div className="combined-team-container">
-            {/* Sujit Hukkerikar */}
-            <div className="combined-team-member">
-              <img src={member1} alt="Sujit Hukkerikar" className="combined-member-photo" />
-              <div className="combined-member-info">
-                <h3 className="combined-name">Sujit Hukkerikar</h3>
-                <p className="combined-role">CEO, Co-Founder</p>
-              </div>
-              <a href="https://www.linkedin.com/in/sujit-hukkerikar/" target="_blank" rel="noopener noreferrer" className="combined-linkedin-link">
-                <FaLinkedin className="combined-linkedin-icon" />
-              </a>
-              <p className="combined-description">
-                Bringing over a decade of corporate expertise, including roles at HP, Autodesk and Tata Elxsi, Sujit is not just our CEO but also a seasoned dairy farming expert with more than twelve years of practical knowledge.
-              </p>
-            </div>
-
-            {/* Prasad Desai */}
-            <div className="combined-team-member">
-              <img src={member2} alt="Prasad Desai" className="combined-member-photo" />
-              <div className="combined-member-info">
-                <h3 className="combined-name">Prasad Desai</h3>
-                <p className="combined-role">CTO, Co-Founder</p>
-              </div>
-              <a href="https://www.linkedin.com/in/prasad-desai/" target="_blank" rel="noopener noreferrer" className="combined-linkedin-link">
-                <FaLinkedin className="combined-linkedin-icon" />
-              </a>
-              <p className="combined-description">
-                With a strong foundation in engineering and over eight years of software development experience, Prasad is the driving force behind the technical development of ADIS's digital solutions.
-              </p>
-            </div>
-
-            {/* Ratish Pandey */}
-            <div className="combined-team-member">
-              <img src={member3} alt="Ratish Pandey" className="combined-member-photo" />
-              <div className="combined-member-info">
-                <h3 className="combined-name">Ratish Pandey</h3>
-                <p className="combined-role">Business Mentor</p>
-              </div>
-              <a href="https://www.linkedin.com/in/ratishpandey/" target="_blank" rel="noopener noreferrer" className="combined-linkedin-link">
-                <FaLinkedin className="combined-linkedin-icon" />
-              </a>
-              <p className="combined-description">
-                A seasoned business leader with over 25 years of experience and a Chartered Accountant qualification, Ratish serves as our business mentor, bringing invaluable expertise.
-              </p>
-            </div>
-          </div>
+<section className="combined-team">
+  <div className="combined-team-content">
+    <h2 className="combined-team-title">Meet Our Leadership Team</h2>
+    <div className="combined-team-container">
+      {/* Sujit Hukkerikar */}
+      <div className="combined-team-member">
+        <img src={member1} alt="Sujit Hukkerikar" className="combined-member-photo" />
+        <div className="combined-member-info">
+          <h3 className="combined-name">Sujit Hukkerikar</h3>
+          <p className="combined-role">CEO, Co-Founder</p>
         </div>
-      </section>
+        <a href="https://www.linkedin.com/in/sujit-hukkerikar/" target="_blank" rel="noopener noreferrer" className="combined-linkedin-link">
+          <FaLinkedin className="combined-linkedin-icon" />
+        </a>
+        <p className="combined-description">
+          Bringing over a decade of corporate expertise, including roles at HP, Autodesk and Tata Elxsi, Sujit is not just our CEO but also a seasoned dairy farming expert with more than twelve years of practical knowledge.
+        </p>
+      </div>
+
+      {/* Prasad Desai */}
+      <div className="combined-team-member">
+        <img src={member2} alt="Prasad Desai" className="combined-member-photo" />
+        <div className="combined-member-info">
+          <h3 className="combined-name">Prasad Desai</h3>
+          <p className="combined-role">CTO, Co-Founder</p>
+        </div>
+        <a href="https://www.linkedin.com/in/prasad-desai/" target="_blank" rel="noopener noreferrer" className="combined-linkedin-link">
+          <FaLinkedin className="combined-linkedin-icon" />
+        </a>
+        <p className="combined-description">
+          With a strong foundation in engineering and over eight years of software development experience, Prasad is the driving force behind the technical development of ADIS's digital solutions.
+        </p>
+      </div>
+
+      {/* Ratish Pandey */}
+      <div className="combined-team-member">
+        <img src={member3} alt="Ratish Pandey" className="combined-member-photo" />
+        <div className="combined-member-info">
+          <h3 className="combined-name">Ratish Pandey</h3>
+          <p className="combined-role">Business Mentor</p>
+        </div>
+        <a href="https://www.linkedin.com/in/ratishpandey/" target="_blank" rel="noopener noreferrer" className="combined-linkedin-link">
+          <FaLinkedin className="combined-linkedin-icon" />
+        </a>
+        <p className="combined-description">
+          A seasoned business leader with over 25 years of experience and a Chartered Accountant qualification, Ratish serves as our business mentor, bringing invaluable expertise.
+        </p>
+      </div>
+
+      {/* New Member 4 */}
+      <div className="combined-team-member">
+        <img src={member4} alt="Member Name" className="combined-member-photo" />
+        <div className="combined-member-info">
+          <h3 className="combined-name">Clyde Luis</h3>
+          <p className="combined-role">Chief Operating Officer</p>
+        </div>
+        <a href="https://www.linkedin.com/in/clydeluis/" target="_blank" rel="noopener noreferrer" className="combined-linkedin-link">
+          <FaLinkedin className="combined-linkedin-icon" />
+        </a>
+        <p className="combined-description">
+          A seasoned technology leader with 30+ years of cross functional and cross industry experience in consulting, marketing, sales, customer acquisition and customer retention by driving customer value through high impact business solutions.
+        </p>
+      </div>
+
+      {/* New Member 5 */}
+      <div className="combined-team-member">
+        <img src={member5} alt="Member Name" className="combined-member-photo" />
+        <div className="combined-member-info">
+          <h3 className="combined-name">Dr. Ashok</h3>
+          <p className="combined-role">Chief Vet Officer</p>
+        </div>
+        <a href=" #" target="_blank" rel="noopener noreferrer" className="combined-linkedin-link">
+          <FaLinkedin className="combined-linkedin-icon" />
+        </a>
+        <p className="combined-description">
+          With a deep expertise in veterinary medicine and a passion for animal welfare, Dr. Ashok leads as Chief Vet Officer, guiding the clinical vision and ensuring the highest standards of care across all operations.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Full Width Image Section */}
       <section className="combined-full-width-image">
@@ -217,7 +243,7 @@ function CombinedHomeContent() {
             </div>
             <div className="combined-client-logo">
               <img src={bajaj} alt="Bajaj Allianz" />
-              <p className="combined-client-name">Bajaj Allianz</p>
+              <p className="combined-client-name">Bajaj General Insurance</p>
             </div>
             <div className="combined-client-logo">
               <img src={gok} alt="Government of Karnataka" />
@@ -232,8 +258,8 @@ function CombinedHomeContent() {
               <p className="combined-client-name">BAIF</p>
             </div>
             <div className="combined-client-logo">
-              <img src={agrivijay} alt="AgriVijay" />
-              <p className="combined-client-name">AgriVijay</p>
+              <img src={hdfc} alt="HDFC ERGO" />
+              <p className="combined-client-name">HDFC ERGO</p>
             </div>
           </div>
         </div>
